@@ -1,0 +1,381 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #e9e4dc;
+  background: #101017;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.game-page {
+  min-height: 100vh;
+  padding: 30px;
+  background:
+    radial-gradient(ellipse at top, #252033 0%, #101017 65%);
+}
+
+.game-header {
+  max-width: 1320px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-icon {
+  font-size: 38px;
+  color: #e5ad59;
+}
+
+.brand h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 17px;
+  color: #e9bc70;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.brand p {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #8f8492;
+  margin: 5px 0 0;
+}
+
+.floor-badge {
+  padding: 13px 18px;
+  border: 1px solid #4a3d4a;
+  border-radius: 8px;
+  color: #a89aaa;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.floor-badge span {
+  color: #e9bc70;
+  font-weight: 800;
+  margin-left: 8px;
+}
+
+.game-layout {
+  max-width: 1320px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 960px) 270px;
+  gap: 22px;
+  align-items: start;
+}
+
+.game-panel,
+.side-card {
+  background: #1b1923;
+  border: 1px solid #39313e;
+  border-radius: 10px;
+}
+
+.game-panel {
+  overflow: hidden;
+}
+
+.game-topbar {
+  min-height: 85px;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-avatar {
+  background: #363044;
+  color: #e9bc70;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.player-info strong,
+.player-info small {
+  display: block;
+}
+
+.player-info strong {
+  font-size: 13px;
+}
+
+.player-info small {
+  color: #958b9a;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.health-section {
+  width: 220px;
+}
+
+.health-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.health-label span {
+  color: #a49aa5;
+  letter-spacing: 1px;
+}
+
+.health-label strong {
+  color: #e6a0a0;
+}
+
+.health-track {
+  height: 10px;
+  background: #3b2932;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.health-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a93f49, #ed7770);
+  transition: width 0.15s;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  position: relative;
+  background: #292532;
+  line-height: 0;
+}
+
+.game-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #918694;
+}
+
+.game-footer span:first-child {
+  color: #80b68b;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-card {
+  padding: 20px;
+}
+
+.side-card h3 {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #d7ae70;
+  margin: 0 0 20px;
+}
+
+.stat-row,
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+  font-size: 11px;
+  color: #aaa0ac;
+  gap: 8px;
+}
+
+.stat-row strong {
+  color: #f0e8df;
+}
+
+.control-row kbd {
+  font-size: 9px;
+  background: #34303c;
+  color: #e7c38b;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.objective-card p {
+  font-size: 12px;
+  color: #b7acb9;
+  line-height: 1.8;
+}
+
+.objective-icon {
+  font-size: 35px;
+  color: #d9a85e;
+  margin: 20px 0 10px;
+}
+
+.objective-card small {
+  color: #8e8392;
+  font-size: 10px;
+}
+
+.restart-button {
+  background: #302638;
+  border: 1px solid #73505d;
+  color: #e9bcaa;
+  padding: 15px;
+  border-radius: 7px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.restart-button:hover {
+  background: #49313c;
+}
+
+.game-over {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 10, 17, 0.91);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: normal;
+}
+
+.death-icon {
+  color: #d16b71;
+  font-size: 55px;
+}
+
+.game-over h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 17px;
+  color: #e87d80;
+  margin: 22px 10px;
+  line-height: 1.8;
+}
+
+.game-over p {
+  color: #a99eaa;
+  font-size: 12px;
+}
+
+.death-stats {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px 25px;
+  text-align: left;
+  margin: 20px;
+  font-size: 10px;
+  color: #b9acbb;
+}
+
+.death-stats strong {
+  color: #e9bc70;
+}
+
+.game-over button {
+  background: #a94b52;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 14px 28px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.page-footer {
+  max-width: 1320px;
+  margin: 30px auto;
+  text-align: center;
+  color: #756b7c;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.page-footer span {
+  margin: 0 10px;
+  color: #d3a665;
+}
+
+@media (max-width: 1000px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .game-page {
+    padding: 12px;
+  }
+
+  .brand h1 {
+    font-size: 11px;
+  }
+
+  .brand p {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .brand-icon {
+    font-size: 25px;
+  }
+
+  .game-topbar {
+    flex-wrap: wrap;
+  }
+
+  .health-section {
+    width: 100%;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+
+  .game-over h2 {
+    font-size: 11px;
+  }
+}
